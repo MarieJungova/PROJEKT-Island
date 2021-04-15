@@ -1,6 +1,13 @@
 /* intuitivnejší box-sizing */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+html {
+	box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+	box-sizing: inherit;
+}
 
 /*
 	BARVY
@@ -22,38 +29,38 @@ body {
 	line-height: 1.6;
 	font-family: 'Merriweather', serif;
 }
-.box{
+
+.box {
 	width: 540px;
 	max-width: 100%;
 	margin: 0 auto;
+	background-color: white;
 }
 
-/* pro nadpisy a menu:
-font-family: 'Raleway', sans-serif; */
 
-h1{
+h1 {
 	font-family: 'Raleway', sans-serif;
 	font-size: 50px;
 	margin-top: 0;
 	font-weight: 700;
 }
 
-header{
+header {
 	color: white;
 	text-align: center;
 	background-image: url(images/island-hlavicka.jpg);
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.5)) , url(images/island-hlavicka.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(images/island-hlavicka.jpg);
 	background-size: cover;
 	min-height: min-content;
 	padding: 35px;
 }
 
-.jana{
+.jana {
 	opacity: 60%;
 	font-style: italic;
 }
 
-.jana::before{
+.jana::before {
 	content: "";
 	display: block;
 	background-color: white;
@@ -62,48 +69,48 @@ header{
 	margin: 10px auto;
 }
 
-li{
-text-transform: uppercase;
-list-style-type: none;
-border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-margin: 5px 15px;
+li {
+	text-transform: uppercase;
+	list-style-type: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	margin: 5px 15px;
 }
 
-ul{
-	text-align: center;	
+ul {
+	text-align: center;
 	padding-left: 0;
 	margin-bottom: 60px;
 }
 
-li a{
+li a {
 	text-decoration: none;
-	color:rgba(0, 0, 0, 0.5);
+	color: rgba(0, 0, 0, 0.5);
 	font-family: 'Raleway', sans-serif;
 }
 
-.island1, 
+.island1,
 .island2,
-.island3{
+.island3 {
 	max-width: 100%;
 }
 
-.popisisland1, 
+.popisisland1,
 .popisisland1 a,
 .popisisland2,
 .popisisland2 a,
 .popisisland3,
-.popisisland3 a{
+.popisisland3 a {
 	margin: 0;
 	text-align: center;
-	color:rgba(0, 0, 0, 0.4); 
+	color: rgba(0, 0, 0, 0.4);
 }
 
-h2{
+h2 {
 	margin: 10px 15px;
 	font-family: 'Raleway', sans-serif;
 }
 
-h2::after{
+h2::after {
 	content: "";
 	display: block;
 	width: 60px;
@@ -114,47 +121,48 @@ h2::after{
 	margin-bottom: 20px;
 }
 
-p{
+p {
 	margin-left: 15px;
 	margin-right: 15px;
 }
 
-.fotogalerie img{
+.fotogalerie img {
 	width: 100%;
 }
 
 .fotogalerie p,
-.fotogalerie a{
+.fotogalerie a {
 	margin: 0;
 	text-align: center;
-	color:rgba(0, 0, 0, 0.4);
+	color: rgba(0, 0, 0, 0.4);
 	margin-bottom: 10px;
 }
 
-footer{
+footer {
 	background-color: rgb(240, 241, 241);
 	padding: 20px 10px;
-	color:rgba(0, 0, 0, 0.3);
+	color: rgba(0, 0, 0, 0.3);
 }
 
-footer a{
+footer a {
 	color: rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (min-width: 541px) and (max-width: 960px){
-	.box{
+@media screen and (min-width: 541px) and (max-width: 960px) {
+	.box {
 		width: 960px;
 		max-width: 100%;
 		margin: 0 auto;
+		background-color: white;
 	}
 
-	li{
+	li {
 		display: inline-block;
 		border-bottom: none;
 		margin: 5px 35px;
 	}
 
-	ul{
+	ul {
 		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 		border-top: 1px solid rgba(0, 0, 0, 0.2);
 		margin-right: 20px;
@@ -163,13 +171,13 @@ footer a{
 
 	.island1,
 	.island2,
-	.island3{
+	.island3 {
 		position: relative;
 	}
 
 	.popisisland1,
 	.popisisland2,
-	.popisisland3{
+	.popisisland3 {
 		position: absolute;
 		bottom: 0;
 		right: 0;
@@ -183,48 +191,128 @@ footer a{
 		color: white;
 	}
 
-	.fotogalerie{
+	.fotogalerie {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
+	.foto img {
+		height: 100%;
+	}
 
-	.fotogalerie p{
-		display:none;
+	.foto p {
+		display: none;
 	}
 }
 
-@media screen and (min-width: 961px){
+@media screen and (min-width: 961px) {
 
-	.box{
+	.box {
 		width: 1200px;
 		max-width: 100%;
 		margin: 0 auto;
 	}
 
-	.box2{
+	.box2 {
 		width: 960px;
 		max-width: 100%;
 		margin: 0 auto;
 	}
 
-	.fotogalerie{
+	.fotogalerie {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 
-	.fotogalerie p{
-		display:none;
+
+	.text p, .text a{
+		color: white;
 	}
 
-	.fotogalerie img{
+	.text{
+		opacity: 0;
 		transition: 0.3s all ease-in-out;
+		position: absolute;
+		top: 70%;
+		left: 0%;
+		color: white;
+		visibility: visible;
+		background-color: rgba(0, 0, 0, 0.4);
+		width: 100%;
+}
+
+	.foto{
+		overflow: hidden;
+		position: relative;
 	}
 
-	.fotogalerie img:hover{
+	.foto img {
+		height: 100%;
+		transition: 0.3s all ease-in-out;
+		overflow: hidden;
+	}
+
+	.foto img:hover {
 		transform: scale(1.1);
 	}
 
+	.foto:hover .text{
+		opacity: 1;
+	}
 
+	li{
+		display: block;
+		text-align: left;
+		border-bottom: none;
+	}
 
+	li::after{
+		content: "";
+		display: block;
+		background-color: rgba(0, 0, 0, 0.2);
+		width: 180px;
+		height: 1px;
+		margin: 5px 0;
+	}
+
+	.zacatek{
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		margin: 30px;
+	}
+
+	body{
+		position: relative;
+	}
+
+	.box2{
+		background-color: white;
+		position: absolute;
+		top: 88%;
+		left: 20%;
+		box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+		margin: 0 auto;
+	}
+
+	.island1,
+	.island2,
+	.island3 {
+		position: relative;
+	}
+
+	.popisisland1,
+	.popisisland2,
+	.popisisland3 {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		color: white;
+		padding: 10px;
+	}
+
+	.popisisland1 a,
+	.popisisland2 a,
+	.popisisland3 a {
+		color: white;
+	}
 
 }
